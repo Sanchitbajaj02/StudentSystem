@@ -13,8 +13,7 @@
         pst = con.prepareStatement("delete from records where id = ?");
         pst.setString(1, id);
         pst.executeUpdate();  
-
-        %>
+%>
 
         <script>  
             alert("Record Deleted Successfully");    

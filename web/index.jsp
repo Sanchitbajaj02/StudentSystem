@@ -99,10 +99,6 @@
             </div>
           </form>
         </div>
-
-        <div class="text-center">
-          <a href="table.jsp" class="btn bg-green bg-dark text-white w-100">Entry Table</a>
-        </div>
     </section>
   </body>
 

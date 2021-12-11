@@ -46,11 +46,11 @@
     <body>
         <jsp:include page="Modules/navigation.jsp"></jsp:include>
 
-        <div class="container" style="height: 50vh;">
-            <h1 class="text-center mt-3">Student Registration | Update Form</h1>
+        <div class="container" >
+            <h3 class="text-center mt-3">Student Registration | Update Form</h3>
 
             <div class="center-box">
-                <form  method="POST" action="#" >
+                <form  method="POST" action="#" class="form-card">
                     <%    
                         Connection con;
                         PreparedStatement pst;
@@ -87,13 +87,10 @@
                     <% }  %>
 
                     <div class="form-group">
-                        <input type="submit" id="submit" value="submit" name="submit" class="btn btn-info">
-                        <input type="reset" id="reset" value="reset" name="reset" class="btn btn-secondary">
+                        <input type="submit" id="submit" value="submit" name="submit" class="btn btn-outline-info">
+                        <input type="reset" id="reset" value="reset" name="reset" class="btn btn-outline-secondary">
+                        <a href="index.jsp" type="button" class="btn btn-outline-danger">Click Back</a>
                     </div>  
-
-                    <div class="form-group">
-                        <a href="index.jsp" type="button" class="btn btn-danger">Click Back</a>
-                    </div>
 
                 </form>
             </div>

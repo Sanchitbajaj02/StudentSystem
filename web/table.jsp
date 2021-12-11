@@ -15,6 +15,7 @@
 <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
+  <jsp:include page="Modules/navigation.jsp"></jsp:include>
   
   <div class="container my-4">
     <h3 class="text-center my-3">Student Registration | Entry Form</h3>
@@ -22,7 +23,7 @@
 
     <table
       id="data-table"
-      class="table table-dark table-bordered form-card"
+      class="table form-card"
       width="100%"
       cellpadding="0"
     >
@@ -57,7 +58,7 @@
                 <td><%=rs.getString("course") %></td>
                 <td><%=rs.getString("fee") %></td>
                 <td><a href="update.jsp?id=<%=id%>" type="button" class="btn btn-info">Edit</a></td>
-                <td><a href="delete.jsp?id=<%=id%>" type="button" class="btn btn-info">Delete</a></td>
+                <td><a href="delete.jsp?id=<%=id%>" type="button" class="btn btn-danger">Delete</a></td>
             </tr>
             <%                
             }
