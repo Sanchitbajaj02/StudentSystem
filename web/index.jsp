@@ -2,7 +2,7 @@
 <%@page import="java.sql.*" %> 
 
 <% 
-    if (request.getParameter("submit") != null) { 
+    if (request.getParameter("submit") != null) {
         String sname = request.getParameter("sname"); 
         String course = request.getParameter("course"); 
         String fee = request.getParameter("fee"); 

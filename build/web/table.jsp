@@ -1,5 +1,5 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%> 
-<%@page import="java.sql.*" %> 
+<%@page import="java.sql.*,java.util.*" %> 
 
 <!DOCTYPE html>
 <html lang="en">
@@ -20,7 +20,21 @@
   <div class="container my-4">
     <h3 class="text-center my-3">Student Registration | Entry Form</h3>
 
-
+  <form method="get" action="search.jsp" class="my-5">
+        <div class="form-group">
+          <label for="Search">Search by Student Name and Course</label>
+          <input type="text" class="form-control" id="Search" name="Search" placeholder="Search here">
+        </div>
+        <div class="form-group">
+          <input type="submit" name="submitForm" value="Search" class="btn btn-primary">
+        </div>
+      </form>
+    <div>
+        <%
+             String search = request.getParameter("Search");
+        %>
+  
+    </div>
     <table
       id="data-table"
       class="table form-card"
@@ -32,6 +46,7 @@
               <th>Student's Name</th>
               <th>Course</th>
               <th>Fee</th>
+              <th>Timestamp</th>
               <th>Edit</th>
               <th>Delete</th>
             </tr>
@@ -57,6 +72,7 @@
                 <td><%=rs.getString("sname") %></td>
                 <td><%=rs.getString("course") %></td>
                 <td><%=rs.getString("fee") %></td>
+                <td><%=rs.getString("Created_at")%></td>
                 <td><a href="update.jsp?id=<%=id%>" type="button" class="btn btn-info">Edit</a></td>
                 <td><a href="delete.jsp?id=<%=id%>" type="button" class="btn btn-danger">Delete</a></td>
             </tr>

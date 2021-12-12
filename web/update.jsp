@@ -14,7 +14,7 @@
         ResultSet rs;
 
         Class.forName("com.mysql.jdbc.Driver");
-        con = DriverManager.getConnection("jdbc:mysql://localhost/school_db","root","");
+        con = DriverManager.getConnection("jdbc:mysql://localhost/school_db","root","Mathesmatics@003");
         pst = con.prepareStatement("update records set sname = ?, course =?, fee= ? where id = ?");
         pst.setString(1, name);
         pst.setString(2, course);
@@ -25,7 +25,8 @@
         %>
 
         <script>  
-            alert("Record Updated Successfully");          
+            alert("Record Updated Successfully");   
+            window.location.href="table.jsp";
        </script>
     <%            
     }
